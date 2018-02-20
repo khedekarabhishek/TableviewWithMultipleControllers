@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8pq-al-Xxe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rJ9-Mg-s2E">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,21 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableviewWithMultipleControllers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="113" y="112"/>
-        </scene>
         <!--My Table View Controller-->
         <scene sceneID="XDa-Ir-eyj">
             <objects>
@@ -44,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8sX-GX-loO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondTableViewCell" id="8sX-GX-loO" customClass="SecondTableViewCell" customModule="TableviewWithMultipleControllers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8sX-GX-loO" id="mst-kH-ab5">
@@ -53,7 +38,7 @@
                                             <color key="backgroundColor" red="1" green="0.1745042769" blue="0.26207087420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Q2c-44-rIY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThirdTableViewCell" id="Q2c-44-rIY" customClass="ThirdTableViewCell" customModule="TableviewWithMultipleControllers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q2c-44-rIY" id="YJ2-bX-7MA">
@@ -91,25 +76,122 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3W-pf-155">
-                                <rect key="frame" x="133" y="323" width="109" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3W-pf-155">
+                                <rect key="frame" x="16" y="36" width="343" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="jby-jt-j7E"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BuK-cz-uit" appends="YES" id="woQ-Ms-PTC"/>
+                                </connections>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.11894801162716641" green="0.25803385701860265" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="u3W-pf-155" firstAttribute="centerX" secondItem="Oze-tk-3kr" secondAttribute="centerX" id="YGl-6u-wxj"/>
-                            <constraint firstItem="u3W-pf-155" firstAttribute="centerY" secondItem="Oze-tk-3kr" secondAttribute="centerY" id="cYC-SU-HmM"/>
+                            <constraint firstItem="u3W-pf-155" firstAttribute="top" secondItem="v6z-oG-UO0" secondAttribute="top" constant="16" id="Ori-kq-2S7"/>
+                            <constraint firstItem="v6z-oG-UO0" firstAttribute="trailing" secondItem="u3W-pf-155" secondAttribute="trailing" constant="16" id="YkS-OO-Uoc"/>
+                            <constraint firstItem="u3W-pf-155" firstAttribute="leading" secondItem="v6z-oG-UO0" secondAttribute="leading" constant="16" id="rMn-Iu-fb0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v6z-oG-UO0"/>
                     </view>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="firstLabel" destination="u3W-pf-155" id="ofn-n1-vwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXb-Gm-0Fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BuK-cz-uit">
+                    <connections>
+                        <action selector="tapLabelWithGesture:" destination="JTF-Sf-KIB" id="3JG-Y6-hA2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2025" y="76"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="mhI-kb-9E8">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="Nk6-9m-9Ba" customClass="SecondViewController" customModule="TableviewWithMultipleControllers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B0b-Ks-MOb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Pv-OV-zSf">
+                                <rect key="frame" x="16" y="36" width="343" height="615"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Nk6-9m-9Ba" id="SGS-pb-Lhf"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36640621937123591" green="0.65227275008168595" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9yi-QI-JyN" firstAttribute="trailing" secondItem="6Pv-OV-zSf" secondAttribute="trailing" constant="16" id="5am-jI-1qh"/>
+                            <constraint firstItem="9yi-QI-JyN" firstAttribute="bottom" secondItem="6Pv-OV-zSf" secondAttribute="bottom" constant="16" id="6Js-42-zlL"/>
+                            <constraint firstItem="6Pv-OV-zSf" firstAttribute="leading" secondItem="9yi-QI-JyN" secondAttribute="leading" constant="16" id="eTL-wf-hng"/>
+                            <constraint firstItem="6Pv-OV-zSf" firstAttribute="top" secondItem="9yi-QI-JyN" secondAttribute="top" constant="16" id="wRA-wa-rgo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9yi-QI-JyN"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="myTextView" destination="6Pv-OV-zSf" id="R79-Wj-LBw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TsI-Pe-bQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="75"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="RW1-IS-Mbx">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="rJ9-Mg-s2E" customClass="ThirdViewController" customModule="TableviewWithMultipleControllers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IbA-Jg-0NV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThirdController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hf-fU-SGv">
+                                <rect key="frame" x="16" y="36" width="343" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DGP-ej-Ocw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="drS-eG-BEp" appends="YES" id="QJU-gH-7sX"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60700058421820102" green="0.41347599706130372" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dqH-Kf-YhX" firstAttribute="trailing" secondItem="2hf-fU-SGv" secondAttribute="trailing" constant="16" id="UpJ-Y6-HEq"/>
+                            <constraint firstItem="2hf-fU-SGv" firstAttribute="leading" secondItem="dqH-Kf-YhX" secondAttribute="leading" constant="16" id="njN-1L-Fp5"/>
+                            <constraint firstItem="2hf-fU-SGv" firstAttribute="top" secondItem="dqH-Kf-YhX" secondAttribute="top" constant="16" id="rWG-EN-ZjA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dqH-Kf-YhX"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="thirdLabel" destination="2hf-fU-SGv" id="9Iw-ra-gbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qtw-y9-2is" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="drS-eG-BEp">
+                    <connections>
+                        <action selector="tapLabelWithGesture:" destination="rJ9-Mg-s2E" id="tIB-EW-r0V"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3535" y="74"/>
         </scene>
     </scenes>
 </document>

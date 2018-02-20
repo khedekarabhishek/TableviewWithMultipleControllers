@@ -9,9 +9,9 @@
 import UIKit
 import Foundation
 
-class FirstTableViewCell: UITableViewCell {
+class FirstTableViewCell: BaseTableViewCell {
     
-    var contentViewController:FirstViewController = FirstViewController()
+//    var contentViewController:FirstViewController = FirstViewController()
     
 
     override func awakeFromNib() {
@@ -26,18 +26,18 @@ class FirstTableViewCell: UITableViewCell {
     }
 
     
-    func addViewControllerToParentViewController(parentViewController:UIViewController)  {
-        parentViewController.addChildViewController(self.contentViewController)
-        self.contentViewController.didMove(toParentViewController: parentViewController)
-        self.contentView.addSubview((self.contentViewController.view)!)
-    }
+//    func addViewControllerToParentViewController(parentViewController:UIViewController)  {
+//        parentViewController.addChildViewController(self.contentViewController)
+//        self.contentViewController.didMove(toParentViewController: parentViewController)
+//        self.contentView.addSubview((self.contentViewController.view)!)
+//    }
     
-    func removeViewControllerFromParentViewController() {
-        self.contentViewController.view.removeFromSuperview()
-        self.contentViewController.willMove(toParentViewController: nil)
-        self.contentViewController.removeFromParentViewController()
-    }
-    
+//    func removeViewControllerFromParentViewController() {
+//        self.contentViewController.view.removeFromSuperview()
+//        self.contentViewController.willMove(toParentViewController: nil)
+//        self.contentViewController.removeFromParentViewController()
+//    }
+//    
 
     
 }

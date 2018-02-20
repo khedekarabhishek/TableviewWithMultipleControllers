@@ -14,6 +14,14 @@ class MyTableViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return self.storyboard?.instantiateViewController(withIdentifier: "FirstViewController") as! FirstViewController
     }()
 
+    lazy var secondVC:SecondViewController = {
+        return self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+    }()
+
+    lazy var thirdVC:ThirdViewController = {
+        return self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as! ThirdViewController
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,12 +46,13 @@ class MyTableViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return UITableViewAutomaticDimension
-        default:
-            return 100
-        }
+        return 300
+//        switch indexPath.row {
+//        case 0:
+//            return 300
+//        default:
+//            return 100
+//        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +60,16 @@ class MyTableViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTableViewCell") as! FirstTableViewCell
             cell.contentViewController =  self.firstVC
+            return cell
+            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SecondTableViewCell") as! SecondTableViewCell
+            cell.contentViewController =  self.secondVC
+            return cell
+
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ThirdTableViewCell") as! ThirdTableViewCell
+            cell.contentViewController =  self.thirdVC
             return cell
             
         default:
@@ -68,8 +87,20 @@ class MyTableViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 let mycell:FirstTableViewCell = cell as! FirstTableViewCell
                 mycell.addViewControllerToParentViewController(parentViewController: self)
             }
+            
+        case 1:
+            if cell .isKind(of: SecondTableViewCell.self) {
+                let mycell:SecondTableViewCell = cell as! SecondTableViewCell
+                mycell.addViewControllerToParentViewController(parentViewController: self)
+            }
+            
+        case 2:
+            if cell .isKind(of: ThirdTableViewCell.self) {
+                let mycell:ThirdTableViewCell = cell as! ThirdTableViewCell
+                mycell.addViewControllerToParentViewController(parentViewController: self)
+            }
+            
         default:
-//            let cell = UITableViewCell.init(style: .default, reuseIdentifier: "Cell")
             break
         }
     }
@@ -82,8 +113,20 @@ class MyTableViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 let mycell:FirstTableViewCell = cell as! FirstTableViewCell
                 mycell.removeViewControllerFromParentViewController()
             }
+            
+        case 1:
+            if cell .isKind(of: SecondTableViewCell.self) {
+                let mycell:SecondTableViewCell = cell as! SecondTableViewCell
+                mycell.removeViewControllerFromParentViewController()
+            }
+            
+        case 2:
+            if cell .isKind(of: ThirdTableViewCell.self) {
+                let mycell:ThirdTableViewCell = cell as! ThirdTableViewCell
+                mycell.removeViewControllerFromParentViewController()
+            }
+
         default:
-            //            let cell = UITableViewCell.init(style: .default, reuseIdentifier: "Cell")
             break
         }
     }

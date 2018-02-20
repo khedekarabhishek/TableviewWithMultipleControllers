@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AD1960FB2004A1A400BD6F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1960FA2004A1A400BD6F77 /* AppDelegate.swift */; };
-		AD1960FD2004A1A400BD6F77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1960FC2004A1A400BD6F77 /* ViewController.swift */; };
 		AD1961002004A1A400BD6F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1960FE2004A1A400BD6F77 /* Main.storyboard */; };
 		AD1961022004A1A400BD6F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1961012004A1A400BD6F77 /* Assets.xcassets */; };
 		AD1961052004A1A400BD6F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1961032004A1A400BD6F77 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,11 @@
 		AD1961292004CB8F00BD6F77 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1961282004CB8F00BD6F77 /* FirstTableViewCell.swift */; };
 		AD19612B2004CBAF00BD6F77 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD19612A2004CBAF00BD6F77 /* FirstViewController.swift */; };
 		ADCFE1632004D0B600BFD009 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE1622004D0B600BFD009 /* MyTableViewController.swift */; };
+		ADCFE1652005DF9600BFD009 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE1642005DF9600BFD009 /* SecondViewController.swift */; };
+		ADCFE1672005DFB700BFD009 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE1662005DFB700BFD009 /* SecondTableViewCell.swift */; };
+		ADCFE1692005DFCE00BFD009 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE1682005DFCE00BFD009 /* ThirdViewController.swift */; };
+		ADCFE16B2005DFE500BFD009 /* ThirdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE16A2005DFE500BFD009 /* ThirdTableViewCell.swift */; };
+		ADCFE16D2005E03700BFD009 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCFE16C2005E03700BFD009 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,6 @@
 /* Begin PBXFileReference section */
 		AD1960F72004A1A400BD6F77 /* TableviewWithMultipleControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableviewWithMultipleControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1960FA2004A1A400BD6F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD1960FC2004A1A400BD6F77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD1960FF2004A1A400BD6F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD1961012004A1A400BD6F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD1961042004A1A400BD6F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +56,11 @@
 		AD1961282004CB8F00BD6F77 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		AD19612A2004CBAF00BD6F77 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		ADCFE1622004D0B600BFD009 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		ADCFE1642005DF9600BFD009 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		ADCFE1662005DFB700BFD009 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		ADCFE1682005DFCE00BFD009 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		ADCFE16A2005DFE500BFD009 /* ThirdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTableViewCell.swift; sourceTree = "<group>"; };
+		ADCFE16C2005E03700BFD009 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				AD1960FA2004A1A400BD6F77 /* AppDelegate.swift */,
-				AD1960FC2004A1A400BD6F77 /* ViewController.swift */,
 				ADCFE1622004D0B600BFD009 /* MyTableViewController.swift */,
+				ADCFE16C2005E03700BFD009 /* BaseTableViewCell.swift */,
 				AD19612A2004CBAF00BD6F77 /* FirstViewController.swift */,
 				AD1961282004CB8F00BD6F77 /* FirstTableViewCell.swift */,
+				ADCFE1642005DF9600BFD009 /* SecondViewController.swift */,
+				ADCFE1662005DFB700BFD009 /* SecondTableViewCell.swift */,
+				ADCFE1682005DFCE00BFD009 /* ThirdViewController.swift */,
+				ADCFE16A2005DFE500BFD009 /* ThirdTableViewCell.swift */,
 				AD1960FE2004A1A400BD6F77 /* Main.storyboard */,
 				AD1961012004A1A400BD6F77 /* Assets.xcassets */,
 				AD1961032004A1A400BD6F77 /* LaunchScreen.storyboard */,
@@ -268,10 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADCFE1652005DF9600BFD009 /* SecondViewController.swift in Sources */,
 				AD1961292004CB8F00BD6F77 /* FirstTableViewCell.swift in Sources */,
-				AD1960FD2004A1A400BD6F77 /* ViewController.swift in Sources */,
 				AD1960FB2004A1A400BD6F77 /* AppDelegate.swift in Sources */,
 				ADCFE1632004D0B600BFD009 /* MyTableViewController.swift in Sources */,
+				ADCFE16B2005DFE500BFD009 /* ThirdTableViewCell.swift in Sources */,
+				ADCFE1672005DFB700BFD009 /* SecondTableViewCell.swift in Sources */,
+				ADCFE1692005DFCE00BFD009 /* ThirdViewController.swift in Sources */,
+				ADCFE16D2005E03700BFD009 /* BaseTableViewCell.swift in Sources */,
 				AD19612B2004CBAF00BD6F77 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
